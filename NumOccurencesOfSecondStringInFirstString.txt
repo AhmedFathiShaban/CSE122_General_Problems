@@ -1,0 +1,32 @@
+#include <iostream>
+#include<string.h>
+
+using namespace std;
+
+
+int main ()
+{
+
+    char firstString[] = "ccabc d df abcd acdabc" ;
+    char secondString[4] = "abc";
+
+    int sizeOfSecond = strlen(secondString);
+    int counter = 0;
+
+    char temp[4]="";
+
+    for(int i = 0 ; i< ( strlen(firstString) - sizeOfSecond + 1 ); i++)
+    {
+        strncpy(temp, &firstString[i] , sizeOfSecond);
+
+        if(strcmp(temp,secondString) == 0)
+        {
+            counter++;
+        }
+
+    }
+
+    cout << counter << endl;
+
+}
+
