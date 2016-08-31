@@ -11,7 +11,7 @@ char * reverse(char x[], int size)
 
     if(size == 0)
     {
-        return strdup(y); // use strdup ( meaning string duplicate) because y is a static char array
+        return strdup(y); // use strdup ( meaning string duplicate) because y is a  local char array not dynmically allocated
         // this strdup transforms a static char array into dynamic char array
     }
 
