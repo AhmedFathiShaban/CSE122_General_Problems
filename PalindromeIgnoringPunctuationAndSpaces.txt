@@ -27,7 +27,7 @@ bool isLetterOrNumber(char c)
 
 bool testPalindrome(char s[], int startIndex , int endIndex)
 {
-    if(startIndex<=endIndex) return true;
+    if(endIndex<=startIndex) return true;
     while(!isLetterOrNumber(s[startIndex]))
         startIndex++;
     while(!isLetterOrNumber(s[endIndex]))
@@ -41,7 +41,7 @@ bool testPalindrome(char s[], int startIndex , int endIndex)
 int main ()
 {
     char s[100] = "able was i ere i saw elba";
-    
+
    cout <<  testPalindrome(s,0,strlen(s)-1) <<endl;
 
 }
