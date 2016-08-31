@@ -1,0 +1,36 @@
+#include <iostream>
+#include<string.h>
+
+using namespace std;
+
+
+void reverse(char x[], int size , int startIndex)
+{
+ // Reverse the same string x
+ // To reverse x from index 0 to index N
+ // First reverse x from index 1 to index N , then add x[0] to the end
+ // This is the recursive action.
+ // Don't think too much. If you want to trace, Use the stack method
+ // Also, If you want to eliminate the third parameter , you can use a static variable instead
+
+
+ if(startIndex == size) return;
+
+ char c = x[startIndex];
+
+ reverse(x,size,startIndex+1);
+
+ x[size - startIndex -1] = c;
+
+
+}
+
+int main ()
+{
+    char x[100] = "Hello I am Here";
+
+    reverse(x,strlen(x),0);
+    cout << x <<endl ;
+
+
+}
