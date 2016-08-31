@@ -1,0 +1,27 @@
+#include <iostream>
+#include<string.h>
+
+using namespace std;
+
+
+int main ()
+{
+
+int PositionOfStart = 10 ;
+int NumStarsInThisRow = 1;
+
+while(PositionOfStart -- >= 1)
+    {
+        for(int i = 0 ; i < PositionOfStart ; i++)
+            cout << " " ;
+        for (int i = 0 ; i < NumStarsInThisRow ; i++)
+            cout << " *";
+        cout << endl;
+        NumStarsInThisRow ++;
+    }
+
+    for(int i = 0 ; i<3 ; i++)
+    {
+        cout <<"        * * * " <<endl;
+    }
+}
